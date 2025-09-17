@@ -42,36 +42,6 @@ async function getCategoryData(marketId: string, categoryId: string) {
   }
 }
 
-export async function generateStaticParams() {
-  try {
-    // Get all markets
-    const dataDirectory = path.join(process.cwd(), 'public', 'data');
-    const marketDirs = await fs.readdir(dataDirectory, { withFileTypes: true });
-
-    const params = [];
-
-    for (const marketDir of marketDirs.filter(d => d.isDirectory())) {
-      try {
-        const categoriesDir = path.join(dataDirectory, marketDir.name, 'categories');
-        const categoryFiles = await fs.readdir(categoriesDir);
-
-        for (const file of categoryFiles.filter(f => f.endsWith('.json'))) {
-          params.push({
-            market: marketDir.name,
-            category: file.replace(/\.json$/, '')
-          });
-        }
-      } catch {
-        // Skip if categories directory doesn't exist
-      }
-    }
-
-    return params;
-  } catch {
-    return [];
-  }
-}
-
 interface CategoryPageProps {
   params: {
     market: string;

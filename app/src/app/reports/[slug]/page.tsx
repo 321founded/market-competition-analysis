@@ -20,7 +20,7 @@ interface CategoryData {
 }
 
 async function getReportData(slug: string): Promise<CategoryData | null> {
-  const filePath = path.join(process.cwd(), '..', 'data', 'employee_benefits_greece', `${slug}.json`);
+  const filePath = path.join(process.cwd(), 'public', 'data', 'employee_benefits_greece', 'categories', `${slug}.json`);
   try {
     const fileContents = await fs.readFile(filePath, 'utf8');
     return JSON.parse(fileContents);
@@ -30,11 +30,15 @@ async function getReportData(slug: string): Promise<CategoryData | null> {
 }
 
 export async function generateStaticParams() {
-  const dataDirectory = path.join(process.cwd(), '..', 'data', 'employee_benefits_greece');
-  const files = await fs.readdir(dataDirectory);
-  return files.map(file => ({
-    slug: file.replace(/\.json$/, ''),
-  }));
+  try {
+    const dataDirectory = path.join(process.cwd(), 'public', 'data', 'employee_benefits_greece', 'categories');
+    const files = await fs.readdir(dataDirectory);
+    return files.map(file => ({
+      slug: file.replace(/\.json$/, ''),
+    }));
+  } catch {
+    return [];
+  }
 }
 
 export default async function ReportPage({ params }: { params: { slug: string } }) {
