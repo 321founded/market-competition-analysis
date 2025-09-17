@@ -1,0 +1,42 @@
+
+{
+  "categoryName": "Modern Platforms (SaaS & EOR)",
+  "categoryDefinition": "This category includes technology companies offering Software-as-a-Service (SaaS) platforms to manage benefits digitally. Many also act as an Employer of Record (EOR), handling the entire employee lifecycle (payroll, taxes, compliance, benefits) for companies without a legal entity in Greece.",
+  "competitors": [
+    {
+      "name": "Remote",
+      "description": "A leading Employer of Record (EOR) platform that handles payroll, taxes, compliance, and both mandatory and supplemental benefits for teams in Greece. They also manage specific remote work regulations like the right to disconnect and expense coverage.",
+      "services": ["EOR Services", "Global Payroll", "Benefits Administration", "Compliance Management", "Remote Work Regulation Management"],
+      "sourceURL": "https://remote.com/country-explorer/greece/benefits",
+      "logoURL": "https://vectorseek.com/wp-content/uploads/2023/09/Remote-Logo-Vector.svg"
+    },
+    {
+      "name": "G-P (Globalization Partners)",
+      "description": "G-P is a major EOR that enables companies to hire in Greece without setting up a local entity. Their platform manages all aspects of HR, including competitive local benefits packages, payroll, and legal compliance.",
+      "services": ["EOR Services", "Payroll & Tax Compliance", "Statutory & Supplemental Benefits", "HR & Legal Guidance"],
+      "sourceURL": "https://www.globalization-partners.com/greece/",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Global_Partners_logo.svg/1200px-Global_Partners_logo.svg.png"
+    },
+    {
+      "name": "Kota",
+      "description": "An all-in-one benefits platform designed to automate and simplify benefits administration for modern teams. It replaces manual broker processes by integrating directly with insurance and pension providers, and includes an employee-facing app.",
+      "services": ["Automated Benefits Administration", "Health & Pension Integration", "Employee Benefits App", "Global Benefits (via partners)"],
+      "sourceURL": "https://kota.io/",
+      "logoURL": "https://cdn.worldvectorlogo.com/logos/kota.svg"
+    },
+    {
+      "name": "Deel",
+      "description": "Deel is a comprehensive EOR platform that manages compliance, payroll, and benefits in Greece. It facilitates optional private healthcare plans and handles complex overtime and leave regulations.",
+      "services": ["EOR Services", "International Payroll", "Private Healthcare Plans", "Teleworking Expense Management", "Overtime & Leave Compliance"],
+      "sourceURL": "https://www.deel.com/countries/greece",
+      "logoURL": "https://www.logosarchive.com/logos/deel-logo.svg"
+    },
+    {
+      "name": "Oyster HR",
+      "description": "Oyster is a global employment platform that helps companies hire, pay, and provide benefits to employees in Greece. It offers localized, compliant benefits packages and a generous remote work policy.",
+      "services": ["Global Employment Platform", "Localized Benefits Packages", "Home Office Budget", "Generous Vacation Policy", "Wellness Benefits"],
+      "sourceURL": "https://www.oysterhr.com/country-guides/greece",
+      "logoURL": "https://assets-global.website-files.com/6125c23d84b586028514d389/6125c23d84b586531f14d3d0_oyster-logo-black.svg"
+    }
+  ]
+}

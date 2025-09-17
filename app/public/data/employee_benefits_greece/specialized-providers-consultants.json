@@ -1,0 +1,27 @@
+{
+  "categoryName": "Specialized Providers & Consultants",
+  "categoryDefinition": "This diverse group includes companies that focus on specific niches of employee wellbeing or provide high-value consulting services, rather than offering an all-in-one platform. It includes EAP providers, wellness specialists, and brokers who create bespoke plans.",
+  "competitors": [
+    {
+      "name": "Hellas EAP",
+      "description": "As Greece's first dedicated Employee Assistance Program (EAP) provider, Hellas EAP offers deep local expertise. Their services include a 24/7 support line, counseling, leadership consultation, and crisis management.",
+      "services": ["24/7 EAP Support Line", "Face-to-face Counseling", "Leadership Consultation", "Crisis Intervention", "Wellbeing Seminars"],
+      "sourceURL": "https://hellaseap.gr/en/",
+      "logoURL": null
+    },
+    {
+      "name": "Howden Greece",
+      "description": "A specialist insurance and reinsurance broker that provides expert consulting on employee benefits. They design customized wellbeing plans by analyzing company culture, market data, and regulatory requirements.",
+      "services": ["Benefits Program Analysis", "Custom Plan Design", "Group Medical & Life Insurance", "Regulatory Guidance", "Data Analytics"],
+      "sourceURL": "https://www.howdengroup.com/gr-en/employee-benefits-and-wellbeing",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/30/Logo_Howden.svg"
+    },
+    {
+      "name": "MantraCare",
+      "description": "A comprehensive employee wellness platform with a strong presence in Greece. It offers an integrated approach, combining EAP with preventive healthcare, chronic condition management, and a multi-language support system.",
+      "services": ["Employee Assistance Program (EAP)", "Virtual Care/Teleconsultation", "Health Screenings", "Chronic Condition Management", "Physiotherapy"],
+      "sourceURL": "https://mantra.care/greece/employee-wellness-program/",
+      "logoURL": "https://mantra.care/wp-content/uploads/2023/10/logo.svg"
+    }
+  ]
+}

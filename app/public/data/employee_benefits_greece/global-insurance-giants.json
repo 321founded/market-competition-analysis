@@ -1,0 +1,42 @@
+
+{
+  "categoryName": "Global Insurance Giants",
+  "categoryDefinition": "This category includes major international insurance companies with an established presence in Greece. They provide traditional employee benefit packages, primarily focused on health, life, and disability insurance. Their strength lies in their brand reputation, comprehensive offerings, and ability to service large corporate accounts.",
+  "competitors": [
+    {
+      "name": "Aetna (Transitioning to Allianz)",
+      "description": "A historically significant provider in Greece, Aetna is currently exiting the international private medical insurance (IPMI) market in Europe. New and renewing customers are being transitioned to their partner, Allianz Partners.",
+      "services": ["Health Insurance", "Dental Insurance", "Life Insurance", "Disability Insurance", "Wellness Programs"],
+      "sourceURL": "https://www.internationalinsurance.com/news/aetna-international-exits-ipmi-market.php",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Aetna_logo.svg"
+    },
+    {
+      "name": "Cigna Global",
+      "description": "Cigna offers flexible and customizable international health insurance plans for individuals, families, and employees in Greece, with a strong focus on expatriates and globally mobile workforces.",
+      "services": ["Comprehensive Health Plans (Silver, Gold, Platinum)", "Customizable Modules (Outpatient, Medical Evacuation)", "Vision & Dental Coverage", "Wellness Programs"],
+      "sourceURL": "https://www.cignaglobal.com/international-health-insurance/plans/greece",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Cigna_logo.svg"
+    },
+    {
+      "name": "Allianz",
+      "description": "As a global financial leader and Aetna's partner for the European market, Allianz provides a wide range of employee benefits, including comprehensive health, wellness, and financial security programs for companies in Greece.",
+      "services": ["Health & Wellbeing Programs", "Flexible Working Arrangements", "Parental Leave", "Employee Share Purchase Plan", "Retirement Planning"],
+      "sourceURL": "https://www.allianz.com/en/careers/what-we-offer.html",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Allianz_logo.svg"
+    },
+    {
+      "name": "Generali Hellas",
+      "description": "Generali offers flexible and comprehensive group insurance programs in Greece, covering health, life, accident, and pension plans, with a focus on digital services and customizable solutions.",
+      "services": ["Group Health Insurance", "Group Life & Accident", "Pension Plans", "Digital Health Services", "Tax Exemptions for Employers"],
+      "sourceURL": "https://www.generali.gr/en/business/group-insurance/",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Generali_2022.svg"
+    },
+    {
+      "name": "NN Hellas",
+      "description": "Part of the NN Group, NN Hellas provides group health and pension programs, along with extensive training, wellness initiatives, and flexible work options for employees.",
+      "services": ["Group Health Programs", "Group Pension/Savings", "Work-life Balance Initiatives", "Home-office Support", "Monthly Meal Allowance"],
+      "sourceURL": "https://www.nnhellas.gr/en/group-programs",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/1f/NN_Group_logo.svg"
+    }
+  ]
+}

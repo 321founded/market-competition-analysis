@@ -1,328 +1,196 @@
-# Market Competition Analysis Agent
+# Market Competition Analysis Framework
 
-A structured framework for comprehensive competitive market analysis with automated data collection, systematic evaluation, and interactive visualization.
+A comprehensive framework for systematic competitive market analysis with automated data collection, structured evaluation, and interactive visualization.
 
-## Overview
+## 🏗️ Repository Structure
 
-This agent template enables systematic analysis of any market's competitive landscape through:
-- **Dual-layer methodology**: Business strategy (WHAT) + Technical operations (HOW)
-- **Structured data collection**: JSON-based competitor profiles and analysis matrices
-- **Interactive visualization**: Next.js app for exploring results
-- **Reusable templates**: Apply to any market with consistent methodology
+```
+market-competition-analysis/
+├── app/                          # Deployable Next.js visualization app
+│   ├── public/data/             # Market data for visualization
+│   ├── src/app/                 # App routes and components
+│   ├── package.json             # App dependencies
+│   └── vercel.json              # Deployment configuration
+│
+├── framework/                   # Reusable analysis framework
+│   ├── methodology/             # Business strategy guides (WHAT to do)
+│   │   ├── 00-overview.md
+│   │   ├── 01-market-definition.md
+│   │   ├── 02-competitor-discovery.md
+│   │   ├── 03-categorization.md
+│   │   ├── 04-analysis-dimensions.md
+│   │   ├── 05-scoring-matrix.md
+│   │   └── 06-insights-extraction.md
+│   │
+│   ├── operations/              # Technical implementation (HOW to execute)
+│   │   ├── 00-tools-overview.md
+│   │   ├── 01-search-strategies.md
+│   │   ├── 02-data-collection.md
+│   │   ├── 03-json-management.md
+│   │   ├── 04-source-tracking.md
+│   │   ├── 05-validation-checks.md
+│   │   ├── 06-visualization-sync.md
+│   │   └── 07-screenshot-capture.md
+│   │
+│   └── templates/               # JSON schemas and patterns
+│       ├── competitor.schema.json
+│       ├── category.schema.json
+│       ├── analysis-matrix.schema.json
+│       ├── market-metadata.schema.json
+│       └── search-queries.json
+│
+├── examples/                    # Example market analyses
+│   ├── employee_benefits_greece/
+│   ├── employee-benefits-france/
+│   └── loyalty-programs/
+│
+└── DEPLOYMENT.md               # Deployment instructions
+```
 
-## Quick Start
+## 🚀 Quick Start
 
 ### For New Market Analysis
 
 1. **Duplicate Framework (CRITICAL FIRST STEP)**
    ```bash
    # Always create isolated copy to prevent conflicts
-   cp -r /path/to/market-competition /path/to/market-competition-[project-name]
-   cd /path/to/market-competition-[project-name]
-   mkdir -p data/[market-name]/categories
-   mkdir -p data/[market-name]/screenshots
+   cp -r market-competition-analysis my-market-analysis
+   cd my-market-analysis
    ```
 
-2. **Define Market Scope**
+2. **Follow Methodology**
    ```bash
-   # Follow methodology/01-market-definition.md
-   # Define: geography, segments, inclusion/exclusion criteria
-   ```
+   # Study the framework guides
+   cat framework/methodology/00-overview.md
 
-3. **Execute Analysis Workflow**
-   ```bash
-   # Follow the complete 6-step methodology:
+   # Follow 6-step process:
    # 1. Market Definition → 2. Discovery → 3. Categorization
    # 4. Analysis Dimensions → 5. Scoring Matrix → 6. Insights
    ```
 
-4. **Capture Visual Evidence**
+3. **Deploy Visualization**
    ```bash
-   # Install Puppeteer and capture competitor screenshots
-   cd capture-scripts
-   npm install puppeteer
-   MARKET_NAME=[market-name] node batch-capture.js [market-name]
-   ```
-
-5. **Generate Visualization**
-   ```bash
-   cd app/market-visualizer
+   cd app
    npm install
-   npm run dev
-   # Navigate to localhost:3000 to view results
+   npm run build
+   # Deploy to Vercel or run locally
    ```
 
-### For Using Existing Analysis
+### For App Deployment Only
+
 ```bash
-# Load existing market data
-cd data/[market-name]
-# View categories, analysis matrix, and insights
-# Launch visualization app to explore interactively
+cd app
+npm install
+vercel --prod
 ```
 
-## Framework Architecture
+## 🎯 Key Features
 
-### Methodology (Business Strategy)
-Located in `methodology/` - defines WHAT to do:
+### Dual-Layer Framework
+- **Methodology (Business)**: WHAT to do - strategic approach
+- **Operations (Technical)**: HOW to execute - implementation details
 
-- **00-overview.md**: Framework principles and expected outcomes
-- **01-market-definition.md**: Define scope and boundaries
-- **02-competitor-discovery.md**: Systematic competitor identification
-- **03-categorization.md**: Logical grouping strategies
-- **04-analysis-dimensions.md**: Multi-dimensional evaluation criteria
-- **05-scoring-matrix.md**: Comparative assessment framework
-- **06-insights-extraction.md**: Strategic insights and rankings
-
-### Operations (Technical Implementation)
-Located in `operations/` - defines HOW to execute:
-
-- **00-tools-overview.md**: Available tools and capabilities
-- **01-search-strategies.md**: WebSearch optimization techniques
-- **02-data-collection.md**: Systematic data gathering approaches (includes duplication protocol)
-- **03-json-management.md**: Data structure and quality standards
-- **04-source-tracking.md**: Citation and evidence documentation
-- **05-validation-checks.md**: Quality assurance protocols
-- **06-visualization-sync.md**: App integration patterns
-- **07-screenshot-capture.md**: Puppeteer-based visual evidence collection
-
-### Data Structure
-```
-data/
-└── [market-name]/
-    ├── metadata.json              # Market definition and scope
-    ├── categories/                # Competitor groupings
-    │   ├── market-leaders.json
-    │   ├── emerging-players.json
-    │   └── niche-specialists.json
-    ├── screenshots/               # Visual evidence
-    │   ├── [company-slug]/
-    │   │   ├── homepage.png
-    │   │   ├── pricing.png
-    │   │   └── product.png
-    │   └── batch-captures/
-    ├── analysis-matrix.json       # Scoring and rankings
-    └── insights.json             # Top 10 and key findings
-```
-
-### Templates
-Located in `templates/` - JSON schemas and query patterns:
-- **competitor.schema.json**: Standard competitor profile structure
-- **category.schema.json**: Category grouping requirements
-- **analysis-matrix.schema.json**: Scoring matrix format
-- **market-metadata.schema.json**: Market definition structure
-- **search-queries.json**: Optimized search patterns
-
-## Workflow Guide
-
-### Phase 0: Project Setup (5 minutes)
-```
-CRITICAL FIRST STEP: Always duplicate framework
-Process: Copy entire framework to isolated directory
-Tools: cp -r command, mkdir for directories
-Output: Clean, isolated workspace ready for analysis
-```
-
-### Phase 1: Market Definition (30 minutes)
-```
-Input: Market request (e.g., "employee benefits Greece")
-Process: Follow methodology/01-market-definition.md
-Output: Clear scope, criteria, boundaries
-Tools: Read market definition guide, document scope
-```
-
-### Phase 2: Discovery & Research (60-90 minutes)
-```
-Process:
-- Follow methodology/02-competitor-discovery.md
-- Use operations/01-search-strategies.md for efficiency
-- Apply operations/02-data-collection.md patterns
-
-Execution:
-- Run parallel WebSearch queries using templates/search-queries.json
-- Document all sources using operations/04-source-tracking.md
-- Validate findings with operations/05-validation-checks.md
-
-Output: Comprehensive competitor list with initial categorization
-```
-
-### Phase 3: Categorization & Analysis (45-60 minutes)
-```
-Process:
-- Apply methodology/03-categorization.md framework
-- Use methodology/04-analysis-dimensions.md for scoring criteria
-- Follow methodology/05-scoring-matrix.md for consistent evaluation
-
-Output:
-- Categorized competitors with clear rationale
-- Multi-dimensional scoring matrix
-- Evidence-backed assessments
-```
-
-### Phase 4: Visual Evidence Collection (30-60 minutes)
-```
-Process:
-- Install Puppeteer in capture-scripts directory
-- Use operations/07-screenshot-capture.md for guidance
-- Execute batch screenshot capture for all competitors
-
-Execution:
-- cd capture-scripts && npm install puppeteer
-- node batch-capture.js [market-name]
-- Validate screenshot quality and coverage
-
-Output:
-- Screenshots for all competitor websites (homepage, pricing, product)
-- Organized in data/[market]/screenshots/ directory
-- Visual evidence for analysis and reporting
-```
-
-### Phase 5: Insights & Visualization (30-45 minutes)
-```
-Process:
-- Extract insights using methodology/06-insights-extraction.md
-- Create top 10 rankings with multiple perspectives
-- Sync data with app using operations/06-visualization-sync.md
-
-Output:
-- Strategic insights and recommendations
-- Interactive visualization dashboard
-- Export-ready reports with visual evidence
-```
-
-## Key Features
-
-### Systematic Methodology
-- **Evidence-based**: Every claim supported by documented sources
-- **Consistent scoring**: 1-5 scale with clear criteria and rationale
-- **Multiple perspectives**: Overall, category, innovation, and customer rankings
-- **Quality tracking**: Confidence levels and completeness metrics
-
-### Efficient Operations
-- **Parallel processing**: Batch similar operations for speed
-- **Source documentation**: Automatic citation and evidence tracking
-- **Data validation**: Multi-layer quality assurance checks
-- **Template-driven**: Reusable patterns for consistent results
+### Systematic Process
+- **6-step methodology** from market definition to insights
+- **Evidence-based** analysis with source documentation
+- **Quality assurance** with validation protocols
+- **Reusable templates** for any market
 
 ### Interactive Visualization
-- **Dynamic loading**: Support for multiple markets
-- **Responsive charts**: Category breakdowns, scoring matrices, competitor positioning
-- **Export options**: PDF, CSV, Excel, JSON formats
-- **Real-time updates**: Sync with data file changes
+- **Multi-market support** with dynamic loading
+- **Category breakdowns** and competitor profiles
+- **Export capabilities** for reports and presentations
+- **Vercel-ready** for instant deployment
 
-## Usage Examples
+## 📱 Live Demo
+
+### Deployment URL
+```
+https://market-competition-analysis.vercel.app
+```
+
+### Example Markets
+- Employee Benefits Greece
+- Employee Benefits France
+- Airline Loyalty Programs
+
+## 🔧 Usage Examples
 
 ### Technology Market Analysis
 ```bash
 Market: "CRM software Europe"
-Categories: "Enterprise Platforms", "SMB Solutions", "Industry Specialists"
-Dimensions: Market Presence, Product Capabilities, Customer Experience, Innovation
-Output: 45 competitors across 4 categories with detailed analysis
+Categories: "Enterprise Platforms", "SMB Solutions", "Specialists"
+Output: 45 competitors with feature comparison matrix
 ```
 
 ### Services Market Analysis
 ```bash
 Market: "Employee benefits Greece"
 Categories: "Modern Platforms", "Traditional Providers", "Global Giants"
-Dimensions: Service Quality, Geographic Coverage, Compliance, Customer Support
 Output: 23 competitors with regulatory compliance focus
 ```
 
-### B2B Software Market
-```bash
-Market: "Project management tools"
-Categories: "Enterprise", "Team Collaboration", "Agile Specialists"
-Dimensions: Feature Completeness, User Experience, Integration, Scalability
-Output: Cross-platform comparison with feature gap analysis
-```
+## 🛠️ Technical Details
 
-## Quality Standards
+### App Stack
+- **Next.js 15** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Static export** for Vercel deployment
+- **JSON-based** data structure
 
-### Data Requirements
-- **Completeness**: 90%+ of required fields populated
-- **Source quality**: 70%+ from Tier 1-2 credibility sources
-- **Currency**: 80%+ of information within 12 months
-- **Confidence**: Minimum "medium" confidence for key assessments
+### Framework Dependencies
+- **Puppeteer** for screenshot capture
+- **JSON schemas** for validation
+- **Markdown** for documentation
+- **Git-based** version control
 
-### Analysis Standards
-- **Scoring consistency**: Calibrated across all competitors
-- **Category coherence**: Clear, defensible groupings
-- **Evidence support**: All scores backed by documented evidence
-- **Strategic relevance**: Insights actionable for business decisions
-
-## Advanced Features
-
-### Multi-Market Comparison
-- Compare competitive dynamics across different markets
-- Identify cross-market expansion opportunities
-- Track competitor presence across regions
-
-### Trend Analysis
-- Monitor market evolution over time
-- Track competitor performance changes
-- Identify emerging threats and opportunities
-
-### Export & Sharing
-- PDF executive summaries
-- Detailed Excel workbooks
-- JSON data for integration
-- Interactive dashboard sharing
-
-## Best Practices
+## 📖 Documentation
 
 ### For Analysts
-1. **Always duplicate framework first** - CRITICAL: prevent conflicts and data corruption
-2. **Start with market definition** - clear scope prevents scope creep
-3. **Use parallel searches** - batch operations for maximum efficiency
-4. **Document sources immediately** - don't rely on memory for citations
-5. **Capture visual evidence** - screenshots provide valuable context
-6. **Validate consistently** - cross-check key facts across sources
-7. **Focus on recent information** - prioritize currency over completeness
+1. **Always duplicate framework first** - CRITICAL: prevent conflicts
+2. **Follow methodology guides** - systematic approach ensures quality
+3. **Use parallel searches** - batch operations for efficiency
+4. **Document sources** - maintain evidence trail
+5. **Capture screenshots** - visual evidence adds value
 
-### For Stakeholders
-1. **Review methodology first** - understand how insights were generated
-2. **Check confidence levels** - weight recommendations by data quality
-3. **Consider limitations** - note gaps and uncertainties in analysis
-4. **Use multiple rankings** - different perspectives reveal different insights
-5. **Track competitive changes** - markets evolve, analysis should too
+### For Developers
+1. **App in `/app`** - standalone Next.js application
+2. **Framework in `/framework`** - reusable methodology
+3. **Examples in `/examples`** - reference implementations
+4. **JSON schemas** - enforce data consistency
 
-## Technical Requirements
+## 🌐 Deployment
 
-### Dependencies
-- Next.js 14+ for visualization app
-- Node.js 18+ for development
-- Modern browser for interactive features
+### Vercel (Recommended)
+```bash
+cd app
+vercel
+```
 
-### File Structure
-- JSON files for data (human-readable, version-controllable)
-- Markdown for documentation (easy to edit and read)
-- React components for visualization (modern, responsive)
+### Manual Build
+```bash
+cd app
+npm run build
+# Deploy `/out` directory to any static host
+```
 
-### Performance
-- Optimized for 15-50 competitors per market
-- Sub-second loading for visualization
-- Efficient search patterns minimize research time
-- Batch operations for maximum speed
+## 🤝 Contributing
 
-## Support & Extension
+### Adding New Methodology
+1. Follow existing structure in `framework/methodology/`
+2. Include both business and technical aspects
+3. Provide examples and templates
 
 ### Adding New Markets
-1. Follow the complete methodology workflow
-2. Use existing templates and schemas
-3. Validate with operations/05-validation-checks.md
-4. Test visualization integration
+1. Use `examples/` as reference
+2. Follow JSON schemas in `framework/templates/`
+3. Update app data structure
 
-### Customizing Analysis
-- Modify dimensions in methodology/04-analysis-dimensions.md
-- Adjust scoring criteria for market-specific needs
-- Add custom categorization frameworks
-- Extend visualization with new chart types
+## 📄 License
 
-### Contributing
-- Follow established JSON schemas
-- Document all methodology changes
-- Test operations procedures thoroughly
-- Maintain backward compatibility
+MIT License - Feel free to use for any competitive analysis needs.
 
 ---
 
-*This framework enables systematic, repeatable competitive analysis while maintaining flexibility for market-specific adaptations. The dual-layer approach ensures both strategic rigor and operational efficiency.*
+*This framework enables systematic, repeatable competitive analysis while maintaining flexibility for market-specific adaptations.*
