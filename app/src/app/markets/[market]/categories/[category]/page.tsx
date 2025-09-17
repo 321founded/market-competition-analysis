@@ -144,7 +144,20 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {competitors.map((competitor: any, index: number) => (
+                {competitors.map((competitor: {
+                  name: string;
+                  website?: string;
+                  logoURL?: string;
+                  description: string;
+                  services?: string[];
+                  founded?: string;
+                  headquarters?: string;
+                  employees?: string;
+                  funding?: string;
+                  reviews?: any;
+                  strengths?: string[];
+                  considerations?: string[];
+                }, index: number) => (
                   <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
 
                     {/* Company Header */}
@@ -165,6 +178,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                         </div>
                       </div>
                       {competitor.logoURL && (
+                        // eslint-disable-next-line @next/next/no-img-element
                         <img
                           src={competitor.logoURL}
                           alt={`${competitor.name} logo`}
@@ -273,8 +287,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                         <div className="pt-3 border-t border-slate-100">
                           <span className="font-medium text-slate-700 text-xs mb-2 block">Screenshots:</span>
                           <div className="grid grid-cols-3 gap-2">
-                            {Object.entries(competitor.screenshots).map(([key, url]: [string, any]) => (
+                            {Object.entries(competitor.screenshots).map(([key, url]: [string, string]) => (
                               <div key={key} className="relative group">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                   src={url}
                                   alt={`${competitor.name} ${key}`}

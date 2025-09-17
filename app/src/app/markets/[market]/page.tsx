@@ -53,7 +53,7 @@ async function getMarketData(marketId: string) {
             };
           })
       );
-    } catch (error) {
+    } catch {
       console.log('No categories directory found or error loading categories');
     }
 
@@ -63,7 +63,7 @@ async function getMarketData(marketId: string) {
       const insightsPath = path.join(dataDirectory, 'insights.json');
       const insightsContent = await fs.readFile(insightsPath, 'utf8');
       insights = JSON.parse(insightsContent);
-    } catch (error) {
+    } catch {
       console.log('No insights file found');
     }
 

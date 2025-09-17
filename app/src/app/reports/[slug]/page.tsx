@@ -24,7 +24,7 @@ async function getReportData(slug: string): Promise<CategoryData | null> {
   try {
     const fileContents = await fs.readFile(filePath, 'utf8');
     return JSON.parse(fileContents);
-  } catch (error) {
+  } catch {
     return null;
   }
 }
