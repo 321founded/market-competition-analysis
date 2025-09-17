@@ -1,0 +1,21 @@
+{
+  "market": {
+    "name": "Employee Benefits Greece",
+    "definition": "Comprehensive analysis of employee benefits providers in the Greek market",
+    "geography": ["Greece"],
+    "segments": ["SME", "Enterprise", "Public Sector"],
+    "totalCompetitors": 23,
+    "lastAnalyzed": "2024-09-17",
+    "analyst": "Market Analysis Framework"
+  },
+  "dataQuality": {
+    "confidence": "high",
+    "completeness": 0.85,
+    "lastUpdated": "2024-09-17"
+  },
+  "methodology": {
+    "sources": ["Company websites", "Industry reports", "Public databases"],
+    "analysisFramework": "6-step competitive analysis",
+    "categories": 3
+  }
+}
