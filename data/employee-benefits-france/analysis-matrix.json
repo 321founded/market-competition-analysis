@@ -1,0 +1,183 @@
+{
+  "analysis_metadata": {
+    "market_name": "Employee Benefits France",
+    "created_date": "2025-09-17",
+    "analysis_type": "Limited test analysis",
+    "confidence_level": "Medium",
+    "competitors_analyzed": 8
+  },
+  "scoring_dimensions": [
+    {
+      "name": "Market Presence",
+      "description": "Market share, brand recognition, customer base",
+      "weight": 0.25
+    },
+    {
+      "name": "Product Innovation",
+      "description": "Technology features, user experience, digital capabilities",
+      "weight": 0.25
+    },
+    {
+      "name": "Service Quality",
+      "description": "Customer support, implementation, reliability",
+      "weight": 0.25
+    },
+    {
+      "name": "Competitive Positioning",
+      "description": "Pricing, differentiation, strategic focus",
+      "weight": 0.25
+    }
+  ],
+  "competitor_scores": [
+    {
+      "name": "Edenred",
+      "category": "Market Leaders",
+      "scores": {
+        "Market Presence": 5,
+        "Product Innovation": 3,
+        "Service Quality": 4,
+        "Competitive Positioning": 4
+      },
+      "overall_score": 4.0,
+      "key_strengths": ["Market leadership", "Global network", "Comprehensive portfolio"],
+      "key_weaknesses": ["Legacy technology", "Innovation lag"],
+      "logo_url": "/logos/edenred.png",
+      "website": "https://www.edenred.com",
+      "revenue_2024": "€2+ billion",
+      "funding_status": "Public (Euronext Paris)",
+      "employee_count": "10,000+ globally",
+      "market_share_france": "35-40%",
+      "key_metrics": {
+        "transaction_volume": "€30+ billion",
+        "users_global": "30+ million",
+        "countries": 46,
+        "digital_transformation": "90%"
+      }
+    },
+    {
+      "name": "Pluxee",
+      "category": "Market Leaders",
+      "scores": {
+        "Market Presence": 4,
+        "Product Innovation": 4,
+        "Service Quality": 4,
+        "Competitive Positioning": 4
+      },
+      "overall_score": 4.0,
+      "key_strengths": ["Digital transformation", "Ecological focus", "Hybrid solutions"],
+      "key_weaknesses": ["Recent rebranding", "Market positioning"]
+    },
+    {
+      "name": "Swile",
+      "category": "Market Leaders",
+      "scores": {
+        "Market Presence": 3,
+        "Product Innovation": 5,
+        "Service Quality": 4,
+        "Competitive Positioning": 5
+      },
+      "overall_score": 4.25,
+      "key_strengths": ["Fintech innovation", "Modern UX", "Bank integration"],
+      "key_weaknesses": ["Smaller market share", "Limited enterprise presence"],
+      "logo_url": "/logos/swile.png",
+      "website": "https://www.swile.co",
+      "revenue_2024": "€204M (+25% growth)",
+      "funding_status": "Unicorn ($1B+ valuation)",
+      "employee_count": "637",
+      "market_share_france": "15-20%",
+      "key_metrics": {
+        "transaction_volume": "€3 billion",
+        "users": "5.5+ million",
+        "client_companies": "85,000+",
+        "ebitda_2024": "€36M (profitable)"
+      }
+    },
+    {
+      "name": "May",
+      "category": "Modern Platforms",
+      "scores": {
+        "Market Presence": 2,
+        "Product Innovation": 5,
+        "Service Quality": 4,
+        "Competitive Positioning": 4
+      },
+      "overall_score": 3.75,
+      "key_strengths": ["Open banking", "Auto-reimbursement", "User experience"],
+      "key_weaknesses": ["Limited market presence", "Scale challenges"]
+    },
+    {
+      "name": "Worklife",
+      "category": "Modern Platforms",
+      "scores": {
+        "Market Presence": 2,
+        "Product Innovation": 4,
+        "Service Quality": 4,
+        "Competitive Positioning": 4
+      },
+      "overall_score": 3.5,
+      "key_strengths": ["Well-being focus", "Flexible solutions", "Modern approach"],
+      "key_weaknesses": ["Niche positioning", "Limited scale"]
+    },
+    {
+      "name": "Club Employés",
+      "category": "Modern Platforms",
+      "scores": {
+        "Market Presence": 3,
+        "Product Innovation": 3,
+        "Service Quality": 4,
+        "Competitive Positioning": 3
+      },
+      "overall_score": 3.25,
+      "key_strengths": ["CSE expertise", "Extensive merchant network", "Established presence"],
+      "key_weaknesses": ["Limited innovation", "Traditional approach"]
+    },
+    {
+      "name": "Gifteo",
+      "category": "SME Specialists",
+      "scores": {
+        "Market Presence": 1,
+        "Product Innovation": 3,
+        "Service Quality": 4,
+        "Competitive Positioning": 4
+      },
+      "overall_score": 3.0,
+      "key_strengths": ["SME focus", "Cost-effective", "Simplified solutions"],
+      "key_weaknesses": ["Limited market presence", "Basic features"]
+    },
+    {
+      "name": "Leeto",
+      "category": "SME Specialists",
+      "scores": {
+        "Market Presence": 2,
+        "Product Innovation": 3,
+        "Service Quality": 5,
+        "Competitive Positioning": 4
+      },
+      "overall_score": 3.5,
+      "key_strengths": ["Customer support", "Ergonomic design", "Business adaptation"],
+      "key_weaknesses": ["Limited innovation", "Small scale"]
+    }
+  ],
+  "rankings": {
+    "overall": [
+      {"rank": 1, "name": "Swile", "score": 4.25},
+      {"rank": 2, "name": "Edenred", "score": 4.0},
+      {"rank": 2, "name": "Pluxee", "score": 4.0},
+      {"rank": 4, "name": "May", "score": 3.75},
+      {"rank": 5, "name": "Worklife", "score": 3.5},
+      {"rank": 5, "name": "Leeto", "score": 3.5},
+      {"rank": 7, "name": "Club Employés", "score": 3.25},
+      {"rank": 8, "name": "Gifteo", "score": 3.0}
+    ],
+    "by_innovation": [
+      {"rank": 1, "name": "Swile", "score": 5},
+      {"rank": 1, "name": "May", "score": 5},
+      {"rank": 3, "name": "Pluxee", "score": 4},
+      {"rank": 3, "name": "Worklife", "score": 4},
+      {"rank": 5, "name": "Edenred", "score": 3},
+      {"rank": 5, "name": "Club Employés", "score": 3},
+      {"rank": 5, "name": "Gifteo", "score": 3},
+      {"rank": 5, "name": "Leeto", "score": 3}
+    ]
+  }
+}

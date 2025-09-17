@@ -1,0 +1,388 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Competitor Category Schema",
+  "description": "Schema for competitor category groupings in market analysis",
+  "type": "object",
+  "required": ["categoryName", "categoryDefinition", "competitors"],
+  "properties": {
+    "categoryName": {
+      "type": "string",
+      "description": "Name of the competitor category",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "categoryDefinition": {
+      "type": "string",
+      "description": "Clear definition of what defines this category",
+      "minLength": 20,
+      "maxLength": 1000
+    },
+    "categoryCharacteristics": {
+      "type": "array",
+      "description": "Key characteristics that define this category",
+      "items": {
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 200
+      },
+      "minItems": 1,
+      "maxItems": 10
+    },
+    "marketDynamics": {
+      "type": "object",
+      "description": "How this category competes and operates in the market",
+      "properties": {
+        "competitiveApproach": {
+          "type": "string",
+          "description": "How companies in this category typically compete",
+          "maxLength": 500
+        },
+        "customerProfile": {
+          "type": "string",
+          "description": "Typical customer profile for this category",
+          "maxLength": 300
+        },
+        "growthTrends": {
+          "type": "string",
+          "description": "Growth trends and market dynamics for this category",
+          "maxLength": 300
+        },
+        "keyDifferentiators": {
+          "type": "array",
+          "description": "What typically differentiates companies in this category",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 10
+        },
+        "marketChallenges": {
+          "type": "array",
+          "description": "Common challenges faced by companies in this category",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 10
+        }
+      }
+    },
+    "categoryMetrics": {
+      "type": "object",
+      "description": "Aggregate metrics for the category",
+      "properties": {
+        "totalCompetitors": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of competitors in this category"
+        },
+        "averageScore": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Average competitive score for category"
+        },
+        "marketShareEstimate": {
+          "type": "string",
+          "description": "Estimated market share of this category (e.g., '25-30%')",
+          "maxLength": 50
+        },
+        "growthRate": {
+          "type": "string",
+          "description": "Growth rate for this category (e.g., '+15% YoY')",
+          "maxLength": 50
+        }
+      }
+    },
+    "competitors": {
+      "type": "array",
+      "description": "List of competitors in this category",
+      "items": {
+        "$ref": "#/definitions/competitor"
+      },
+      "minItems": 1
+    },
+    "categoryInsights": {
+      "type": "object",
+      "description": "Analysis insights specific to this category",
+      "properties": {
+        "keyFindings": {
+          "type": "array",
+          "description": "Key insights about this category",
+          "items": {
+            "type": "string",
+            "minLength": 10
+          },
+          "maxItems": 10
+        },
+        "topPerformers": {
+          "type": "array",
+          "description": "Top performing companies in this category",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 5
+        },
+        "marketGaps": {
+          "type": "array",
+          "description": "Identified gaps or opportunities in this category",
+          "items": {
+            "type": "string",
+            "minLength": 5
+          },
+          "maxItems": 10
+        },
+        "threatAssessment": {
+          "type": "string",
+          "description": "Assessment of competitive threats from this category",
+          "maxLength": 500
+        },
+        "futureOutlook": {
+          "type": "string",
+          "description": "Future outlook and predictions for this category",
+          "maxLength": 500
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Category analysis metadata",
+      "properties": {
+        "lastUpdated": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when category was last updated (YYYY-MM-DD)"
+        },
+        "analyst": {
+          "type": "string",
+          "description": "Name or identifier of the analyst",
+          "maxLength": 100
+        },
+        "analysisVersion": {
+          "type": "string",
+          "description": "Version of the analysis methodology used",
+          "maxLength": 20
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Overall confidence in category analysis"
+        },
+        "completeness": {
+          "type": "string",
+          "pattern": "^\\d+%$",
+          "description": "Percentage of category analysis completed"
+        }
+      },
+      "required": ["lastUpdated", "confidence"]
+    }
+  },
+  "definitions": {
+    "competitor": {
+      "type": "object",
+      "required": ["name", "description", "services", "website"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Company name",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief company description",
+          "minLength": 10,
+          "maxLength": 500
+        },
+        "services": {
+          "type": "array",
+          "description": "Key services offered",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 20
+        },
+        "website": {
+          "type": "string",
+          "format": "uri",
+          "description": "Company website"
+        },
+        "sourceURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "Discovery source URL"
+        },
+        "logoURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "Company logo URL"
+        },
+        "headquarters": {
+          "type": "string",
+          "description": "Company headquarters location",
+          "maxLength": 100
+        },
+        "founded": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "description": "Year founded"
+        },
+        "employees": {
+          "type": "string",
+          "description": "Employee count or range",
+          "maxLength": 50
+        },
+        "funding": {
+          "type": "string",
+          "description": "Funding status",
+          "maxLength": 100
+        },
+        "businessModel": {
+          "type": "string",
+          "description": "Primary business model",
+          "maxLength": 100
+        },
+        "targetMarket": {
+          "type": "string",
+          "description": "Target market segment",
+          "maxLength": 200
+        },
+        "keyFeatures": {
+          "type": "array",
+          "description": "Key product features",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 15
+        },
+        "pricing": {
+          "type": "string",
+          "description": "Pricing information",
+          "maxLength": 200
+        },
+        "customerExamples": {
+          "type": "array",
+          "description": "Example customers",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 10
+        },
+        "partnerships": {
+          "type": "array",
+          "description": "Key partnerships",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 10
+        },
+        "reviews": {
+          "type": "object",
+          "description": "Review platform scores",
+          "properties": {
+            "g2": {
+              "type": "object",
+              "properties": {
+                "score": {
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "reviewCount": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            },
+            "capterra": {
+              "type": "object",
+              "properties": {
+                "score": {
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "reviewCount": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          }
+        },
+        "caseStudies": {
+          "type": "array",
+          "description": "Case study URLs",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "maxItems": 10
+        },
+        "awards": {
+          "type": "array",
+          "description": "Awards and recognition",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 10
+        },
+        "strengths": {
+          "type": "array",
+          "description": "Key competitive strengths",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 8
+        },
+        "considerations": {
+          "type": "array",
+          "description": "Potential limitations",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 8
+        },
+        "bestFor": {
+          "type": "string",
+          "description": "Best use case or customer type",
+          "maxLength": 200
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "lastUpdated": {
+              "type": "string",
+              "format": "date"
+            },
+            "confidence": {
+              "type": "string",
+              "enum": ["high", "medium", "low"]
+            },
+            "dataCompleteness": {
+              "type": "string",
+              "pattern": "^\\d+%$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

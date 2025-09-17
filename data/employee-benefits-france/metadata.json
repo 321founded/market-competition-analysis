@@ -1,0 +1,52 @@
+{
+  "market_definition": {
+    "name": "Employee Benefits France",
+    "description": "Digital platforms and services providing employee benefits management for French companies",
+    "geography": {
+      "primary": "France",
+      "secondary": [],
+      "notes": "Focus on solutions operating in French market with local compliance"
+    },
+    "customer_segments": [
+      "SMB (10-100 employees)",
+      "Mid-market (100-1000 employees)",
+      "Enterprise (1000+ employees)"
+    ],
+    "product_scope": {
+      "core_offering": "Employee benefits platforms and services",
+      "key_features": [
+        "Benefits administration",
+        "Meal vouchers/cards",
+        "Transport benefits",
+        "Health insurance management",
+        "Employee perks and discounts",
+        "Flexible benefits platforms"
+      ],
+      "business_model": "B2B SaaS and services"
+    },
+    "inclusion_criteria": [
+      "Operating in French market",
+      "Serving French companies",
+      "Digital platform or service component",
+      "Employee benefits as core business"
+    ],
+    "exclusion_criteria": [
+      "Pure insurance companies without platform",
+      "HR software without benefits focus",
+      "Pure resellers",
+      "Discontinued services"
+    ],
+    "market_entry_barriers": {
+      "regulatory": "French labor law compliance, URSSAF integration",
+      "technical": "Payroll system integrations",
+      "distribution": "HR department relationships"
+    }
+  },
+  "analysis_metadata": {
+    "scope": "Limited test - 5-8 key players",
+    "created_date": "2025-09-17",
+    "last_updated": "2025-09-17",
+    "analyst": "Claude",
+    "confidence_level": "Medium (test analysis)"
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "categoryName": "Innovative Value Carriers",
+  "description": "Low-cost and value airlines with distinctive loyalty programs that challenge traditional models through innovative earning structures and customer-friendly policies",
+  "rationale": "These carriers prove that loyalty programs can be successful without legacy complexity, often offering simpler redemption models, flexible policies, and unique earning mechanisms that appeal to price-conscious travelers",
+  "competitors": [
+    {
+      "name": "Alaska Airlines Atmos Rewards (formerly Mileage Plan)",
+      "description": "Newly launched program combining Alaska and Hawaiian Airlines, offering industry-first choice in earning structure and excellent award redemption values",
+      "services": [
+        "Three earning structure options (changeable annually)",
+        "Four-tier elite status system",
+        "oneworld alliance benefits",
+        "Free stopovers on award tickets",
+        "Excellent international award pricing",
+        "Companion fare benefits"
+      ],
+      "website": "https://www.alaskaair.com/atmos-rewards",
+      "sourceURL": "https://awardwallet.com/blog/alaska-airlines-mileage-plan-guide/",
+      "category": "Innovative Value Carriers",
+      "metadata": {
+        "lastUpdated": "2025-09-17",
+        "confidence": "high",
+        "primarySources": 2,
+        "dataCompleteness": "90%"
+      },
+      "business": {
+        "founded": "2025",
+        "headquarters": "Seattle, Washington, USA",
+        "employees": "25000+",
+        "businessModel": "Value carrier loyalty program with premium features",
+        "targetMarket": "West Coast travelers, value-conscious frequent flyers"
+      },
+      "capabilities": {
+        "keyFeatures": [
+          "Choice of earning: 1 mile per mile flown OR 5 points per $1 spent",
+          "Free 24+ hour stopovers on award tickets",
+          "Excellent international award pricing to Asia/Oceania",
+          "oneworld alliance access",
+          "Companion fare annual benefit",
+          "Distance-based earning option (rare in industry)"
+        ],
+        "integrations": [
+          "oneworld alliance (13 airlines)",
+          "15 partner airlines including non-alliance",
+          "American Airlines, Delta partnerships",
+          "British Airways partnership",
+          "Credit card partnerships (Bank of America)"
+        ],
+        "languages": ["English", "Spanish"]
+      },
+      "market": {
+        "targetCustomers": ["West Coast travelers", "Value-conscious frequent flyers", "International award travelers"],
+        "partnerships": ["oneworld alliance", "Hawaiian Airlines", "American Airlines", "Delta Air Lines"],
+        "geographicFocus": ["West Coast USA", "Alaska", "Hawaii", "International routes to Asia"]
+      },
+      "evidence": {
+        "awards": [
+          "Point.me #2 North American Loyalty Program 2025",
+          "US News #1 Best Air Rewards Scheme"
+        ],
+        "mediaFeaturing": [
+          "Industry-first choice in earning structure",
+          "Combined Alaska and Hawaiian programs"
+        ]
+      },
+      "analysis": {
+        "strengths": [
+          "Industry-first flexible earning structure choice",
+          "Excellent international award pricing",
+          "Free stopovers on award tickets",
+          "oneworld alliance benefits",
+          "Strong West Coast and Pacific coverage",
+          "Distance-based earning option available",
+          "Customer-friendly policies"
+        ],
+        "considerations": [
+          "Limited domestic network compared to major carriers",
+          "Newer combined program still establishing track record",
+          "Geographic concentration in West Coast/Pacific"
+        ]
+      }
+    },
+    {
+      "name": "JetBlue TrueBlue",
+      "description": "East Coast focused program known for excellent award availability, competitive redemption rates, and aggressive status matching",
+      "services": [
+        "Points earning on all purchases",
+        "Two-tier elite status (Mosaic 1, Mosaic 2)",
+        "Excellent award availability",
+        "Last-minute award deals",
+        "Status matching programs",
+        "Family pooling options"
+      ],
+      "website": "https://www.jetblue.com/trueblue",
+      "sourceURL": "https://travel.usnews.com/rankings/travel-rewards/airline-rewards/jetblue-trueblue/",
+      "category": "Innovative Value Carriers",
+      "metadata": {
+        "lastUpdated": "2025-09-17",
+        "confidence": "high",
+        "primarySources": 2,
+        "dataCompleteness": "85%"
+      },
+      "business": {
+        "founded": "2002",
+        "headquarters": "New York, New York, USA",
+        "employees": "22000+",
+        "businessModel": "Low-cost carrier with premium loyalty features",
+        "targetMarket": "East Coast travelers, leisure and business segments"
+      },
+      "capabilities": {
+        "keyFeatures": [
+          "Points earning on every dollar spent",
+          "Excellent award availability",
+          "Last-minute deals as low as 8,000 points",
+          "Two-tier Mosaic elite status",
+          "Free checked bags for elites",
+          "Aggressive status matching from competitors"
+        ],
+        "integrations": [
+          "JetBlue credit card partnerships",
+          "Paisly by JetBlue travel portal",
+          "Hotel and car rental partners",
+          "Shopping portal",
+          "Status match with Frontier, Southwest, Spirit"
+        ],
+        "languages": ["English", "Spanish"]
+      },
+      "market": {
+        "targetCustomers": ["East Coast business travelers", "Leisure travelers", "Caribbean destination travelers"],
+        "partnerships": ["Limited airline partnerships", "Focus on own network"],
+        "geographicFocus": ["East Coast USA", "Caribbean", "Central America", "South America", "Select European cities"]
+      },
+      "evidence": {
+        "awards": [
+          "Point.me #5 North American Loyalty Program 2025",
+          "US News 'Good' rating for redemption rates"
+        ],
+        "mediaFeaturing": [
+          "15+ million TrueBlue members",
+          "Status matching expansion to multiple carriers"
+        ]
+      },
+      "analysis": {
+        "strengths": [
+          "Excellent award availability on own flights",
+          "Competitive pricing on popular East Coast routes",
+          "Easy online booking with points",
+          "Aggressive status matching programs",
+          "Strong East Coast and Caribbean network",
+          "Customer-friendly policies",
+          "Last-minute award availability"
+        ],
+        "considerations": [
+          "Limited partner airline network",
+          "Geographic concentration in East Coast",
+          "No major alliance membership",
+          "Limited international long-haul options"
+        ]
+      }
+    },
+    {
+      "name": "Southwest Rapid Rewards",
+      "description": "Revolutionary revenue-based program with no blackout dates, free changes, and one of the most customer-friendly policies in the industry",
+      "services": [
+        "Revenue-based earning and redemption",
+        "No blackout dates or restrictions",
+        "Free flight changes and cancellations",
+        "Three-tier elite status system",
+        "Companion Pass benefit",
+        "Points never expire"
+      ],
+      "website": "https://www.southwest.com/rapid-rewards",
+      "sourceURL": "https://www.fastcompany.com/91401067/airline-rewards-program-rankings-2025-most-value-for-travel-points-flexible-flight-change-cancel-policies-american-airlines-united-jetblue",
+      "category": "Innovative Value Carriers",
+      "metadata": {
+        "lastUpdated": "2025-09-17",
+        "confidence": "high",
+        "primarySources": 2,
+        "dataCompleteness": "80%"
+      },
+      "business": {
+        "founded": "1987",
+        "headquarters": "Dallas, Texas, USA",
+        "employees": "70000+",
+        "businessModel": "Low-cost carrier with revenue-based loyalty model",
+        "targetMarket": "Budget-minded domestic travelers, Southwest route network"
+      },
+      "capabilities": {
+        "keyFeatures": [
+          "Revenue-based earning (6-12 points per dollar)",
+          "No blackout dates on award flights",
+          "Free flight changes and cancellations",
+          "Companion Pass (fly companion free)",
+          "Points never expire",
+          "Three elite tiers (A-List, A-List Preferred)"
+        ],
+        "integrations": [
+          "Southwest credit card partnerships",
+          "Hotel partners (Marriott, Hyatt, IHG)",
+          "Car rental partners",
+          "Shopping portal",
+          "Chase Ultimate Rewards transfer partner"
+        ],
+        "languages": ["English", "Spanish"]
+      },
+      "market": {
+        "targetCustomers": ["Budget-conscious domestic travelers", "Leisure travelers", "Business travelers on Southwest routes"],
+        "partnerships": ["No airline partnerships", "Focus on own network"],
+        "geographicFocus": ["United States domestic", "Caribbean", "Mexico", "Central America"]
+      },
+      "evidence": {
+        "awards": [
+          "US News #3 Best Air Rewards Scheme",
+          "Point.me #6 North American Loyalty Program 2025"
+        ],
+        "mediaFeaturing": [
+          "130+ million members",
+          "Pioneered revenue-based redemption model"
+        ]
+      },
+      "analysis": {
+        "strengths": [
+          "No blackout dates or restrictions",
+          "Free flight changes and cancellations",
+          "Revenue-based model ensures fair value",
+          "Companion Pass is industry-leading benefit",
+          "Points never expire",
+          "Extensive domestic US network",
+          "Customer-friendly policies"
+        ],
+        "considerations": [
+          "No international long-haul flights",
+          "No assigned seating",
+          "Limited premium cabin options",
+          "No airline alliance partnerships",
+          "Geographic limitations"
+        ]
+      }
+    }
+  ]
+}

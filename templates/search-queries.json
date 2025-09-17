@@ -1,0 +1,293 @@
+{
+  "searchPatterns": {
+    "marketDiscovery": {
+      "description": "Queries for discovering market landscape and major players",
+      "patterns": [
+        "{market} competitive landscape 2024",
+        "top {service} companies {geography}",
+        "{industry} market leaders analysis",
+        "{market} vendor comparison matrix",
+        "best {service} providers {region}",
+        "{industry} market share leaders",
+        "Gartner {market} Magic Quadrant",
+        "Forrester {industry} Wave report",
+        "{market} startup ecosystem {year}"
+      ],
+      "variables": {
+        "market": "Primary market category (e.g., 'employee benefits', 'CRM software')",
+        "service": "Service type (e.g., 'HR technology', 'cloud storage')",
+        "industry": "Industry classification (e.g., 'fintech', 'edtech')",
+        "geography": "Geographic region (e.g., 'Europe', 'Greece', 'North America')",
+        "region": "Specific region (e.g., 'EMEA', 'Asia Pacific')",
+        "year": "Current year for recent analysis"
+      }
+    },
+    "competitorSpecific": {
+      "description": "Queries for researching specific competitors",
+      "patterns": [
+        "{company} competitors alternatives",
+        "{company} vs {competitor} comparison",
+        "companies like {company}",
+        "{company} competitive analysis",
+        "{company} market position",
+        "{company} customer reviews ratings",
+        "{company} features pricing plans",
+        "{company} case studies testimonials",
+        "{company} funding investors valuation",
+        "{company} revenue growth employees"
+      ],
+      "variables": {
+        "company": "Specific company name",
+        "competitor": "Known competitor for comparison"
+      }
+    },
+    "industryIntelligence": {
+      "description": "Queries for gathering industry insights and trends",
+      "patterns": [
+        "{industry} venture capital investments {year}",
+        "{market} startup funding rounds",
+        "{geography} {industry} acquisitions",
+        "{market} IPO companies public offerings",
+        "{industry} trends report {year}",
+        "{market} regulatory changes {year}",
+        "{industry} conference speakers {year}",
+        "{market} customer survey results"
+      ]
+    },
+    "productAnalysis": {
+      "description": "Queries for analyzing products and services",
+      "patterns": [
+        "{company} product features specifications",
+        "{service} pricing comparison {year}",
+        "{company} integration capabilities API",
+        "{product} user experience review",
+        "{company} security compliance certifications",
+        "{service} implementation process",
+        "{company} customer support quality",
+        "{product} mobile app capabilities"
+      ],
+      "variables": {
+        "product": "Specific product name",
+        "service": "Service category"
+      }
+    },
+    "customerResearch": {
+      "description": "Queries for understanding customer perspective",
+      "patterns": [
+        "best {service} tools {year}",
+        "{service} comparison reviews G2 Capterra",
+        "{industry} user survey report",
+        "{service} customer satisfaction study",
+        "{company} customer testimonials",
+        "{service} implementation challenges",
+        "{market} buyer preferences survey",
+        "{service} ROI case studies"
+      ]
+    },
+    "financialIntelligence": {
+      "description": "Queries for financial and business intelligence",
+      "patterns": [
+        "{company} financial performance revenue",
+        "{company} private equity venture capital",
+        "{industry} valuation multiples {year}",
+        "{company} acquisition merger rumors",
+        "{market} investment trends {year}",
+        "{company} IPO prospects",
+        "{industry} market size forecast",
+        "{geography} {industry} market value"
+      ]
+    }
+  },
+  "domainFiltering": {
+    "highAuthority": {
+      "description": "Domains to prioritize for credible information",
+      "domains": [
+        "gartner.com",
+        "forrester.com",
+        "idc.com",
+        "cbinsights.com",
+        "crunchbase.com",
+        "pitchbook.com",
+        "sec.gov",
+        "reuters.com",
+        "bloomberg.com",
+        "techcrunch.com",
+        "venturebeat.com",
+        "forbes.com"
+      ]
+    },
+    "reviewPlatforms": {
+      "description": "Customer review and rating platforms",
+      "domains": [
+        "g2.com",
+        "capterra.com",
+        "trustradius.com",
+        "softwareadvice.com",
+        "getapp.com"
+      ]
+    },
+    "industryPublications": {
+      "description": "Industry-specific publication domains (examples)",
+      "technology": [
+        "techrepublic.com",
+        "zdnet.com",
+        "computerworld.com",
+        "infoworld.com"
+      ],
+      "finance": [
+        "americanbanker.com",
+        "finextra.com",
+        "pymnts.com"
+      ],
+      "hr": [
+        "hrdive.com",
+        "shrm.org",
+        "workforce.com"
+      ]
+    },
+    "excludeLowQuality": {
+      "description": "Domains to exclude for low-quality information",
+      "domains": [
+        "scamadviser.com",
+        "pinterest.com",
+        "tumblr.com",
+        "instagram.com",
+        "facebook.com"
+      ]
+    }
+  },
+  "searchStrategies": {
+    "parallelDiscovery": {
+      "description": "Execute multiple discovery searches simultaneously",
+      "searchCount": 4,
+      "strategy": "Combine broad market overview with specific segment searches",
+      "example": [
+        "{market} competitive landscape 2024",
+        "top {service} providers {geography}",
+        "{industry} startups funding 2024",
+        "Gartner {market} Magic Quadrant"
+      ]
+    },
+    "competitorValidation": {
+      "description": "Cross-reference discovered competitors",
+      "searchCount": 6,
+      "strategy": "Validate each competitor with multiple search angles",
+      "example": [
+        "{company1} competitors alternatives",
+        "{company2} customer reviews ratings",
+        "{company3} funding investors team",
+        "{company4} features pricing plans",
+        "{company5} case studies customers",
+        "{company6} market position analysis"
+      ]
+    },
+    "deepDive": {
+      "description": "Comprehensive analysis of key competitors",
+      "searchCount": 8,
+      "strategy": "Gather detailed information across all analysis dimensions",
+      "example": [
+        "{company} complete company profile",
+        "{company} technology platform architecture",
+        "{company} customer success stories",
+        "{company} pricing model breakdown",
+        "{company} competitive advantages",
+        "{company} market challenges risks",
+        "{company} growth trajectory forecast",
+        "{company} partnership ecosystem"
+      ]
+    }
+  },
+  "queryOptimization": {
+    "timeBounded": {
+      "description": "Add time constraints for recent information",
+      "suffixes": [
+        "2024",
+        "2023 2024",
+        "recent",
+        "latest",
+        "current",
+        "updated"
+      ]
+    },
+    "geographic": {
+      "description": "Geographic modifiers for regional focus",
+      "modifiers": [
+        "Europe",
+        "North America",
+        "Asia Pacific",
+        "EMEA",
+        "global",
+        "international",
+        "local",
+        "regional"
+      ]
+    },
+    "businessModel": {
+      "description": "Business model specifications",
+      "modifiers": [
+        "SaaS",
+        "cloud",
+        "enterprise",
+        "SMB",
+        "B2B",
+        "B2C",
+        "marketplace",
+        "platform",
+        "subscription",
+        "freemium"
+      ]
+    }
+  },
+  "qualityIndicators": {
+    "strongSignals": {
+      "description": "Search terms that indicate high-quality sources",
+      "terms": [
+        "analysis",
+        "report",
+        "study",
+        "research",
+        "comparison",
+        "evaluation",
+        "assessment",
+        "market guide",
+        "magic quadrant",
+        "wave report"
+      ]
+    },
+    "contentTypes": {
+      "description": "Content types to prioritize",
+      "types": [
+        "whitepaper",
+        "case study",
+        "analyst report",
+        "industry survey",
+        "market research",
+        "competitive analysis",
+        "vendor comparison",
+        "buyer's guide"
+      ]
+    }
+  },
+  "searchValidation": {
+    "crossReference": {
+      "description": "Queries to validate discovered information",
+      "patterns": [
+        "{company} official website",
+        "{claim} verification",
+        "{statistic} source validation",
+        "{company} press release announcement",
+        "{data} third party confirmation"
+      ]
+    },
+    "factChecking": {
+      "description": "Queries to fact-check key claims",
+      "patterns": [
+        "{company} employee count LinkedIn",
+        "{company} funding amount Crunchbase",
+        "{company} customer list official",
+        "{company} revenue SEC filing",
+        "{company} headquarters location"
+      ]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "category_name": "SME Specialists",
+  "description": "Platforms specifically designed for small and medium enterprises",
+  "competitors": [
+    {
+      "name": "Gifteo",
+      "description": "SME-focused employee benefits with budget-conscious solutions",
+      "headquarters": "France",
+      "founded": 2017,
+      "key_products": [
+        "SME-adapted benefit solutions",
+        "Budget-optimized offerings",
+        "Simple benefit management",
+        "Cost-effective programs"
+      ],
+      "market_position": "SME specialist",
+      "employee_count": "20-50",
+      "key_differentiators": [
+        "SME-specific features",
+        "Budget-conscious approach",
+        "Simplified management",
+        "Affordable pricing"
+      ],
+      "target_segments": ["SMB"],
+      "sources": [
+        "Search results from TOP 6 des meilleures plateformes d'avantages salariés"
+      ],
+      "confidence_level": "Medium"
+    },
+    {
+      "name": "Leeto",
+      "description": "Ergonomic platform with responsive customer support",
+      "headquarters": "France",
+      "founded": 2018,
+      "key_products": [
+        "User-friendly benefit platform",
+        "Customer support focus",
+        "Tailored business solutions",
+        "Ergonomic interface"
+      ],
+      "market_position": "Growing specialist",
+      "employee_count": "30-70",
+      "key_differentiators": [
+        "Exceptional customer support",
+        "Ergonomic design",
+        "Business-specific adaptations",
+        "Responsive service"
+      ],
+      "target_segments": ["SMB", "Mid-market"],
+      "sources": [
+        "Search results from TOP 6 des meilleures plateformes d'avantages salariés"
+      ],
+      "confidence_level": "Medium"
+    }
+  ],
+  "category_insights": {
+    "market_dynamics": "Serving underserved SME segment with tailored solutions",
+    "key_trends": ["Simplified interfaces", "Cost optimization", "Personal service"],
+    "competitive_intensity": "Medium"
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "categoryName": "Airline Alliance Leaders",
+  "description": "Major airline loyalty programs from the three global alliances (Star Alliance, oneworld, SkyTeam) representing the largest and most established programs worldwide",
+  "rationale": "These programs benefit from extensive partner networks, established infrastructure, and massive member bases that create competitive advantages through scale and reach",
+  "competitors": [
+    {
+      "name": "Flying Blue (Air France-KLM)",
+      "description": "Joint loyalty program for Air France and KLM, ranked #1 globally in 2025 with dynamic earning and extensive partnership network",
+      "services": [
+        "Miles earning on flights and partners",
+        "Four-tier elite status system (Explorer, Silver, Gold, Platinum, Ultimate)",
+        "SkyTeam alliance benefits",
+        "Dynamic award pricing",
+        "Monthly Promo Rewards",
+        "Extensive credit card partnerships"
+      ],
+      "website": "https://www.flyingblue.com",
+      "sourceURL": "https://thepointsguy.com/loyalty-programs/ultimate-guide-flying-blue/",
+      "category": "Airline Alliance Leaders",
+      "metadata": {
+        "lastUpdated": "2025-09-17",
+        "confidence": "high",
+        "primarySources": 3,
+        "dataCompleteness": "95%"
+      },
+      "business": {
+        "founded": "2005",
+        "headquarters": "Paris, France / Amsterdam, Netherlands",
+        "employees": "100000+",
+        "businessModel": "Airline loyalty program with partnership revenue",
+        "targetMarket": "Global air travelers, focus on Europe-Americas routes"
+      },
+      "capabilities": {
+        "keyFeatures": [
+          "Experience Points (XP) system for status qualification",
+          "Ultimate XP for highest tier",
+          "Miles never expire with activity",
+          "Dynamic pricing model",
+          "25% discount Promo Rewards monthly",
+          "SkyTeam lounge access",
+          "Companion benefits at Ultimate level"
+        ],
+        "integrations": [
+          "SkyTeam alliance (19 airlines)",
+          "Major credit card programs (Amex, Chase, Citi)",
+          "Hotel partners",
+          "Car rental partners",
+          "Shopping portals"
+        ],
+        "languages": ["English", "French", "Dutch", "German", "Spanish", "Italian"]
+      },
+      "market": {
+        "targetCustomers": ["Business travelers", "Leisure travelers", "Premium segment"],
+        "partnerships": ["SkyTeam alliance", "Delta Air Lines", "Korean Air", "Virgin Atlantic"],
+        "geographicFocus": ["Europe", "North America", "Asia", "Africa", "South America"]
+      },
+      "evidence": {
+        "awards": [
+          "Point.me #1 Global Airline Loyalty Program 2025",
+          "Point.me #1 Global Airline Loyalty Program 2024"
+        ],
+        "mediaFeaturing": [
+          "The Points Guy Ultimate Guide",
+          "30 million members worldwide",
+          "100,000+ new members monthly"
+        ]
+      },
+      "analysis": {
+        "strengths": [
+          "Global #1 ranking for two consecutive years",
+          "Extensive credit card transfer partnerships",
+          "Dynamic pricing with saver rates available",
+          "Strong SkyTeam alliance network",
+          "Innovative Ultimate tier with companion benefits",
+          "No mile expiration with activity"
+        ],
+        "considerations": [
+          "Dynamic pricing can be unpredictable",
+          "High fees on some partner redemptions",
+          "Complex XP system for status qualification"
+        ]
+      }
+    },
+    {
+      "name": "American Airlines AAdvantage",
+      "description": "One of the world's largest loyalty programs launched in 1981, offering extensive oneworld alliance benefits and innovative Loyalty Points system",
+      "services": [
+        "Loyalty Points earning system",
+        "Four-tier elite status (Gold, Platinum, Platinum Pro, Executive Platinum)",
+        "oneworld alliance benefits",
+        "Milestone rewards",
+        "Extensive partner network",
+        "Award travel on oneworld partners"
+      ],
+      "website": "https://www.aa.com/aadvantage",
+      "sourceURL": "https://thepointsguy.com/loyalty-programs/best-frequent-flyer-programs/",
+      "category": "Airline Alliance Leaders",
+      "metadata": {
+        "lastUpdated": "2025-09-17",
+        "confidence": "high",
+        "primarySources": 3,
+        "dataCompleteness": "90%"
+      },
+      "business": {
+        "founded": "1981",
+        "headquarters": "Fort Worth, Texas, USA",
+        "employees": "130000+",
+        "businessModel": "Airline loyalty program with extensive partnership revenue",
+        "targetMarket": "Global travelers with focus on Americas and trans-Atlantic routes"
+      },
+      "capabilities": {
+        "keyFeatures": [
+          "Loyalty Points system (simpler than miles)",
+          "11x Loyalty Points for Executive Platinum members",
+          "Early milestone rewards at 15,000 points",
+          "Award availability on oneworld partners",
+          "Flexible award redemption options",
+          "Status match programs"
+        ],
+        "integrations": [
+          "oneworld alliance (13 airlines)",
+          "Citi and Barclays credit cards",
+          "Hotel partners (Hyatt, Marriott)",
+          "Car rental partners",
+          "Shopping and dining programs"
+        ],
+        "languages": ["English", "Spanish", "Portuguese"]
+      },
+      "market": {
+        "targetCustomers": ["Business travelers", "Leisure travelers", "Premium customers"],
+        "partnerships": ["oneworld alliance", "British Airways", "Cathay Pacific", "Qantas"],
+        "geographicFocus": ["North America", "South America", "Europe", "Asia-Pacific"]
+      },
+      "evidence": {
+        "awards": [
+          "Point.me #2 Global Airline Loyalty Program 2025",
+          "Launched world's second frequent flyer program"
+        ],
+        "mediaFeaturing": [
+          "130+ million members",
+          "Extensive oneworld network coverage"
+        ]
+      },
+      "analysis": {
+        "strengths": [
+          "Easier status qualification than competitors",
+          "Excellent milestone reward system",
+          "Strong oneworld alliance network",
+          "Flexible award redemption options",
+          "Long-established program with proven track record",
+          "Good availability on partner airlines"
+        ],
+        "considerations": [
+          "Basic economy earns minimal points",
+          "Some high fees on international awards",
+          "Limited lounge access at lower tiers"
+        ]
+      }
+    },
+    {
+      "name": "United MileagePlus",
+      "description": "Star Alliance anchor program known for extensive global network reach and flexible redemption options with no mile expiration",
+      "services": [
+        "Miles earning without expiration",
+        "Four-tier elite status system",
+        "Star Alliance Gold/Silver benefits",
+        "Extensive partner redemptions",
+        "PlusPoints for upgrades",
+        "Global network coverage"
+      ],
+      "website": "https://www.united.com/mileageplus",
+      "sourceURL": "https://upgradedpoints.com/travel/airlines/flying-blue-air-france-klm-loyalty-program/",
+      "category": "Airline Alliance Leaders",
+      "metadata": {
+        "lastUpdated": "2025-09-17",
+        "confidence": "high",
+        "primarySources": 2,
+        "dataCompleteness": "85%"
+      },
+      "business": {
+        "founded": "1981",
+        "headquarters": "Chicago, Illinois, USA",
+        "employees": "100000+",
+        "businessModel": "Airline loyalty program with Star Alliance integration",
+        "targetMarket": "Global travelers with focus on trans-Pacific and trans-Atlantic routes"
+      },
+      "capabilities": {
+        "keyFeatures": [
+          "Miles never expire",
+          "PlusPoints for upgrades",
+          "Extensive Star Alliance network",
+          "28 Star Alliance partner airlines",
+          "Award flights starting at 5,000 miles",
+          "Europe flights from 20,000 miles one-way"
+        ],
+        "integrations": [
+          "Star Alliance (28 airlines)",
+          "Chase credit card partnership",
+          "Hotel partners",
+          "Car rental partners",
+          "Shopping portals"
+        ],
+        "languages": ["English", "Spanish", "Mandarin", "Japanese"]
+      },
+      "market": {
+        "targetCustomers": ["Business travelers", "International travelers", "Premium segment"],
+        "partnerships": ["Star Alliance", "Lufthansa", "Singapore Airlines", "ANA"],
+        "geographicFocus": ["North America", "Europe", "Asia-Pacific", "Global coverage"]
+      },
+      "evidence": {
+        "mediaFeaturing": [
+          "Extensive Star Alliance network",
+          "100+ million members estimated"
+        ]
+      },
+      "analysis": {
+        "strengths": [
+          "Miles never expire",
+          "Extensive global Star Alliance network",
+          "Flexible redemption options",
+          "Strong trans-Pacific coverage",
+          "Good upgrade program with PlusPoints",
+          "Award availability across 28 alliance partners"
+        ],
+        "considerations": [
+          "Difficult to achieve elite status",
+          "Award pricing not always transparent",
+          "Limited domestic route coverage vs competitors"
+        ]
+      }
+    }
+  ]
+}

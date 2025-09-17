@@ -1,0 +1,56 @@
+{
+  "market": "Airline Loyalty Programs",
+  "geography": "Global (focus on major airlines and alliances)",
+  "segments": [
+    "Full-service carriers",
+    "Low-cost carriers",
+    "Regional airlines",
+    "Alliance-based programs"
+  ],
+  "timeframe": "2024-2025",
+  "lastUpdated": "2025-09-17",
+  "scope": {
+    "productService": "Frequent flyer loyalty programs offering miles/points earning and redemption",
+    "businessModel": "B2C loyalty programs with B2B partnership components",
+    "priceRange": "Free membership with tiered elite status levels",
+    "keyFeatures": [
+      "Miles/points earning on flights",
+      "Elite status tiers with benefits",
+      "Redemption for flights and rewards",
+      "Partner earning opportunities",
+      "Credit card partnerships"
+    ]
+  },
+  "inclusionCriteria": {
+    "mustInclude": [
+      "Major global airline loyalty programs",
+      "Programs with >10M members",
+      "Alliance-wide programs (Star Alliance, SkyTeam, oneworld)",
+      "Innovative program features or structures"
+    ],
+    "considerIncluding": [
+      "Regional airline programs with unique features",
+      "Hotel and credit card loyalty programs for comparison",
+      "Coalition loyalty programs",
+      "New entrants with disruptive models"
+    ],
+    "exclude": [
+      "Defunct or discontinued programs",
+      "Pure corporate programs without consumer access",
+      "Programs with <1M members unless highly innovative"
+    ]
+  },
+  "marketEntryBarriers": [
+    "Airline operations requirement",
+    "Technology infrastructure investment",
+    "Partnership network development",
+    "Regulatory compliance (aviation)",
+    "Customer acquisition costs"
+  ],
+  "rationale": "Focusing on airline loyalty programs allows deep analysis of the Flying Blue competitive landscape while including relevant cross-industry innovation from hotels and credit cards that influence airline program design.",
+  "assumptions": [
+    "Member numbers are estimates where not publicly disclosed",
+    "Program features current as of analysis date",
+    "Focus on programs available to leisure travelers"
+  ]
+}

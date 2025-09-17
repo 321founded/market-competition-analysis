@@ -1,0 +1,414 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Market Metadata Schema",
+  "description": "Schema for market analysis metadata and configuration",
+  "type": "object",
+  "required": ["market", "methodology", "scope"],
+  "properties": {
+    "market": {
+      "type": "object",
+      "description": "Basic market information",
+      "required": ["name", "definition", "lastAnalyzed"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Market name for display purposes",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "id": {
+          "type": "string",
+          "description": "Market identifier (kebab-case for URLs)",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "maxLength": 100
+        },
+        "definition": {
+          "type": "string",
+          "description": "Clear definition of the market being analyzed",
+          "minLength": 20,
+          "maxLength": 1000
+        },
+        "geography": {
+          "type": "array",
+          "description": "Geographic markets included in analysis",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 50
+        },
+        "segments": {
+          "type": "array",
+          "description": "Customer segments included in analysis",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 20
+        },
+        "lastAnalyzed": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when analysis was completed (YYYY-MM-DD)"
+        },
+        "analyst": {
+          "type": "string",
+          "description": "Name or identifier of the analyst",
+          "maxLength": 100
+        },
+        "totalCompetitors": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Total number of competitors identified"
+        },
+        "categories": {
+          "type": "array",
+          "description": "List of competitor categories defined",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 10
+        }
+      }
+    },
+    "methodology": {
+      "type": "object",
+      "description": "Analysis methodology and standards used",
+      "required": ["analysisFramework", "scoringScale"],
+      "properties": {
+        "analysisFramework": {
+          "type": "string",
+          "description": "Framework used for competitive analysis",
+          "maxLength": 200
+        },
+        "scoringScale": {
+          "type": "string",
+          "description": "Scoring scale used (e.g., '1-5 scale with evidence requirements')",
+          "maxLength": 200
+        },
+        "sourcesRequired": {
+          "type": "string",
+          "description": "Source requirements for data validation",
+          "maxLength": 200
+        },
+        "confidenceTracking": {
+          "type": "boolean",
+          "description": "Whether confidence levels are tracked for assessments",
+          "default": true
+        },
+        "dimensions": {
+          "type": "array",
+          "description": "Analysis dimensions used in this market",
+          "items": {
+            "type": "object",
+            "required": ["name", "description"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Dimension name",
+                "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+              },
+              "displayName": {
+                "type": "string",
+                "description": "Human-readable dimension name"
+              },
+              "description": {
+                "type": "string",
+                "description": "What this dimension measures",
+                "maxLength": 300
+              },
+              "weight": {
+                "type": "number",
+                "minimum": 0.1,
+                "maximum": 5.0,
+                "description": "Weight multiplier for this dimension"
+              },
+              "marketSpecific": {
+                "type": "boolean",
+                "description": "Whether this dimension is specific to this market",
+                "default": false
+              }
+            }
+          },
+          "maxItems": 12
+        },
+        "categoryFramework": {
+          "type": "string",
+          "description": "Approach used for categorizing competitors",
+          "maxLength": 300
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "description": "Analysis scope and boundaries",
+      "required": ["inclusionCriteria"],
+      "properties": {
+        "inclusionCriteria": {
+          "type": "array",
+          "description": "Criteria for including competitors in analysis",
+          "items": {
+            "type": "string",
+            "minLength": 5
+          },
+          "minItems": 1,
+          "maxItems": 10
+        },
+        "exclusionCriteria": {
+          "type": "array",
+          "description": "Criteria for excluding competitors from analysis",
+          "items": {
+            "type": "string",
+            "minLength": 5
+          },
+          "maxItems": 10
+        },
+        "timeframe": {
+          "type": "object",
+          "description": "Temporal scope of the analysis",
+          "properties": {
+            "analysisWindow": {
+              "type": "string",
+              "description": "Time period for the analysis (e.g., 'Q4 2024')",
+              "maxLength": 50
+            },
+            "dataRecency": {
+              "type": "string",
+              "description": "Requirement for data recency (e.g., 'within 12 months')",
+              "maxLength": 50
+            },
+            "historicalContext": {
+              "type": "string",
+              "description": "Historical period considered for context",
+              "maxLength": 100
+            }
+          }
+        },
+        "marketSize": {
+          "type": "object",
+          "description": "Market size information if available",
+          "properties": {
+            "totalAddressableMarket": {
+              "type": "string",
+              "description": "Total addressable market size",
+              "maxLength": 100
+            },
+            "servicableAddressableMarket": {
+              "type": "string",
+              "description": "Serviceable addressable market size",
+              "maxLength": 100
+            },
+            "marketGrowthRate": {
+              "type": "string",
+              "description": "Market growth rate if known",
+              "maxLength": 50
+            },
+            "sourceNote": {
+              "type": "string",
+              "description": "Source for market size information",
+              "maxLength": 200
+            }
+          }
+        }
+      }
+    },
+    "dataQuality": {
+      "type": "object",
+      "description": "Data quality indicators and standards",
+      "properties": {
+        "completeness": {
+          "type": "string",
+          "pattern": "^\\d+%$",
+          "description": "Overall data completeness percentage"
+        },
+        "sourceVerification": {
+          "type": "string",
+          "pattern": "^\\d+%$",
+          "description": "Percentage of data points with verified sources"
+        },
+        "recency": {
+          "type": "string",
+          "pattern": "^\\d+%$",
+          "description": "Percentage of data within required timeframe"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Overall confidence in the analysis"
+        },
+        "limitations": {
+          "type": "array",
+          "description": "Known limitations or gaps in the analysis",
+          "items": {
+            "type": "string",
+            "minLength": 10
+          },
+          "maxItems": 10
+        },
+        "dataGaps": {
+          "type": "array",
+          "description": "Specific data gaps that could not be filled",
+          "items": {
+            "type": "string",
+            "minLength": 5
+          },
+          "maxItems": 20
+        }
+      }
+    },
+    "stakeholders": {
+      "type": "object",
+      "description": "Stakeholder information and context",
+      "properties": {
+        "primaryAudience": {
+          "type": "string",
+          "description": "Primary audience for this analysis",
+          "maxLength": 200
+        },
+        "businessContext": {
+          "type": "string",
+          "description": "Business context driving the analysis",
+          "maxLength": 500
+        },
+        "decisionContext": {
+          "type": "string",
+          "description": "Specific decisions this analysis will inform",
+          "maxLength": 500
+        },
+        "updateFrequency": {
+          "type": "string",
+          "description": "How often this analysis should be updated",
+          "maxLength": 100
+        }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "description": "Summary of sources used in analysis",
+      "properties": {
+        "totalSources": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of sources consulted"
+        },
+        "sourceBreakdown": {
+          "type": "object",
+          "description": "Breakdown of sources by type",
+          "properties": {
+            "official": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of official company sources"
+            },
+            "analyst": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of analyst reports used"
+            },
+            "industry": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of industry publications"
+            },
+            "user": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of user review sources"
+            },
+            "news": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of news articles"
+            }
+          }
+        },
+        "keySourceTypes": {
+          "type": "array",
+          "description": "Most important types of sources for this market",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 10
+        }
+      }
+    },
+    "versioning": {
+      "type": "object",
+      "description": "Version control and change tracking",
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Analysis version number",
+          "pattern": "^\\d+\\.\\d+(\\.\\d+)?$"
+        },
+        "previousVersions": {
+          "type": "array",
+          "description": "Previous analysis versions",
+          "items": {
+            "type": "object",
+            "properties": {
+              "version": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string",
+                "format": "date"
+              },
+              "changes": {
+                "type": "string",
+                "description": "Summary of changes from previous version",
+                "maxLength": 300
+              }
+            }
+          },
+          "maxItems": 10
+        },
+        "nextReview": {
+          "type": "string",
+          "format": "date",
+          "description": "Planned date for next analysis review"
+        }
+      }
+    },
+    "export": {
+      "type": "object",
+      "description": "Export and sharing configuration",
+      "properties": {
+        "availableFormats": {
+          "type": "array",
+          "description": "Export formats available for this market",
+          "items": {
+            "type": "string",
+            "enum": ["json", "csv", "xlsx", "pdf", "pptx"]
+          },
+          "uniqueItems": true
+        },
+        "visualization": {
+          "type": "object",
+          "description": "Visualization configuration",
+          "properties": {
+            "chartsEnabled": {
+              "type": "boolean",
+              "description": "Whether charts are available for this market",
+              "default": true
+            },
+            "compareEnabled": {
+              "type": "boolean",
+              "description": "Whether cross-market comparison is enabled",
+              "default": false
+            },
+            "customDashboard": {
+              "type": "boolean",
+              "description": "Whether custom dashboard views are available",
+              "default": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

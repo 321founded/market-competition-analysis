@@ -1,0 +1,525 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Analysis Matrix Schema",
+  "description": "Schema for competitive analysis scoring matrix",
+  "type": "object",
+  "required": ["matrix", "metadata"],
+  "properties": {
+    "matrix": {
+      "type": "object",
+      "description": "The competitive analysis matrix structure",
+      "required": ["dimensions", "competitors"],
+      "properties": {
+        "dimensions": {
+          "type": "array",
+          "description": "Analysis dimensions used for scoring",
+          "items": {
+            "$ref": "#/definitions/dimension"
+          },
+          "minItems": 3,
+          "maxItems": 12
+        },
+        "competitors": {
+          "type": "array",
+          "description": "Scored competitors in the matrix",
+          "items": {
+            "$ref": "#/definitions/scoredCompetitor"
+          },
+          "minItems": 1
+        },
+        "weighting": {
+          "type": "object",
+          "description": "Dimension weighting methodology",
+          "properties": {
+            "methodology": {
+              "type": "string",
+              "description": "Weighting approach used",
+              "maxLength": 200
+            },
+            "customerImpact": {
+              "type": "object",
+              "description": "Customer impact weighting factors",
+              "properties": {
+                "high": {
+                  "type": "number",
+                  "minimum": 1,
+                  "description": "Weight multiplier for high customer impact dimensions"
+                },
+                "medium": {
+                  "type": "number",
+                  "minimum": 1,
+                  "description": "Weight multiplier for medium customer impact dimensions"
+                },
+                "standard": {
+                  "type": "number",
+                  "minimum": 1,
+                  "description": "Weight multiplier for standard impact dimensions"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "rankings": {
+      "type": "object",
+      "description": "Different ranking perspectives",
+      "properties": {
+        "overall": {
+          "type": "array",
+          "description": "Overall market leadership ranking",
+          "items": {
+            "$ref": "#/definitions/rankedCompetitor"
+          }
+        },
+        "byCategory": {
+          "type": "object",
+          "description": "Rankings within each category",
+          "patternProperties": {
+            "^[a-zA-Z][a-zA-Z0-9_\\-\\s]*$": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/rankedCompetitor"
+              }
+            }
+          }
+        },
+        "innovation": {
+          "type": "array",
+          "description": "Innovation and growth potential ranking",
+          "items": {
+            "$ref": "#/definitions/rankedCompetitor"
+          }
+        },
+        "customerValue": {
+          "type": "array",
+          "description": "Customer value delivery ranking",
+          "items": {
+            "$ref": "#/definitions/rankedCompetitor"
+          }
+        }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "description": "Matrix analysis insights",
+      "properties": {
+        "dimensionAnalysis": {
+          "type": "array",
+          "description": "Analysis of each dimension across all competitors",
+          "items": {
+            "type": "object",
+            "properties": {
+              "dimension": {
+                "type": "string",
+                "description": "Dimension name"
+              },
+              "averageScore": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "scoreDistribution": {
+                "type": "object",
+                "properties": {
+                  "high": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Number of competitors scoring 4-5"
+                  },
+                  "medium": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Number of competitors scoring 3"
+                  },
+                  "low": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Number of competitors scoring 1-2"
+                  }
+                }
+              },
+              "leaders": {
+                "type": "array",
+                "description": "Top performers in this dimension",
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 5
+              },
+              "insights": {
+                "type": "array",
+                "description": "Key insights about this dimension",
+                "items": {
+                  "type": "string",
+                  "minLength": 10
+                },
+                "maxItems": 5
+              }
+            },
+            "required": ["dimension", "averageScore"]
+          }
+        },
+        "correlationAnalysis": {
+          "type": "array",
+          "description": "Correlations between dimensions",
+          "items": {
+            "type": "object",
+            "properties": {
+              "dimension1": {
+                "type": "string"
+              },
+              "dimension2": {
+                "type": "string"
+              },
+              "correlation": {
+                "type": "number",
+                "minimum": -1,
+                "maximum": 1
+              },
+              "significance": {
+                "type": "string",
+                "enum": ["strong", "moderate", "weak"]
+              },
+              "insight": {
+                "type": "string",
+                "description": "What this correlation suggests",
+                "maxLength": 300
+              }
+            },
+            "required": ["dimension1", "dimension2", "correlation"]
+          }
+        },
+        "competitiveGaps": {
+          "type": "array",
+          "description": "Identified market gaps and opportunities",
+          "items": {
+            "type": "object",
+            "properties": {
+              "gapType": {
+                "type": "string",
+                "enum": ["capability", "market_segment", "geographic", "price_point"]
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of the gap",
+                "minLength": 10,
+                "maxLength": 300
+              },
+              "affectedDimensions": {
+                "type": "array",
+                "description": "Dimensions where this gap is most apparent",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "opportunity": {
+                "type": "string",
+                "description": "Potential opportunity this gap represents",
+                "maxLength": 300
+              },
+              "difficulty": {
+                "type": "string",
+                "enum": ["low", "medium", "high"],
+                "description": "Difficulty of addressing this gap"
+              }
+            },
+            "required": ["gapType", "description"]
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Analysis metadata and quality information",
+      "required": ["analysisDate", "totalCompetitors", "scoringMethodology"],
+      "properties": {
+        "analysisDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when analysis was completed"
+        },
+        "analyst": {
+          "type": "string",
+          "description": "Analyst who performed the scoring",
+          "maxLength": 100
+        },
+        "totalCompetitors": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Total number of competitors analyzed"
+        },
+        "totalDimensions": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Total number of analysis dimensions"
+        },
+        "averageScore": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Average score across all competitors and dimensions"
+        },
+        "scoringMethodology": {
+          "type": "string",
+          "description": "Description of scoring methodology used",
+          "maxLength": 500
+        },
+        "confidenceLevel": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Overall confidence in the analysis"
+        },
+        "dataQuality": {
+          "type": "object",
+          "description": "Data quality indicators",
+          "properties": {
+            "sourceVerification": {
+              "type": "string",
+              "pattern": "^\\d+%$",
+              "description": "Percentage of scores with verified sources"
+            },
+            "completeness": {
+              "type": "string",
+              "pattern": "^\\d+%$",
+              "description": "Percentage of matrix cells populated"
+            },
+            "recency": {
+              "type": "string",
+              "pattern": "^\\d+%$",
+              "description": "Percentage of data within 12 months"
+            }
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "description": "Known limitations or caveats in the analysis",
+          "items": {
+            "type": "string",
+            "minLength": 10
+          },
+          "maxItems": 10
+        }
+      }
+    }
+  },
+  "definitions": {
+    "dimension": {
+      "type": "object",
+      "required": ["name", "weight", "description", "scoringCriteria"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Dimension name (camelCase for programmatic access)",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9]*$",
+          "maxLength": 50
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Human-readable dimension name",
+          "maxLength": 100
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 5.0,
+          "description": "Weight multiplier for this dimension"
+        },
+        "description": {
+          "type": "string",
+          "description": "Clear description of what this dimension measures",
+          "minLength": 20,
+          "maxLength": 500
+        },
+        "scoringCriteria": {
+          "type": "object",
+          "description": "Scoring criteria for each score level",
+          "required": ["1", "2", "3", "4", "5"],
+          "properties": {
+            "1": {
+              "type": "string",
+              "description": "Criteria for score of 1",
+              "maxLength": 200
+            },
+            "2": {
+              "type": "string",
+              "description": "Criteria for score of 2",
+              "maxLength": 200
+            },
+            "3": {
+              "type": "string",
+              "description": "Criteria for score of 3",
+              "maxLength": 200
+            },
+            "4": {
+              "type": "string",
+              "description": "Criteria for score of 4",
+              "maxLength": 200
+            },
+            "5": {
+              "type": "string",
+              "description": "Criteria for score of 5",
+              "maxLength": 200
+            }
+          }
+        },
+        "evidenceRequirements": {
+          "type": "array",
+          "description": "Types of evidence needed to score this dimension",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 10
+        },
+        "marketSpecific": {
+          "type": "boolean",
+          "description": "Whether this dimension is specific to this market",
+          "default": false
+        }
+      }
+    },
+    "scoredCompetitor": {
+      "type": "object",
+      "required": ["name", "category", "scores", "compositeScore"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Competitor name",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "category": {
+          "type": "string",
+          "description": "Competitor category",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "scores": {
+          "type": "object",
+          "description": "Scores for each dimension",
+          "patternProperties": {
+            "^[a-zA-Z][a-zA-Z0-9]*$": {
+              "$ref": "#/definitions/dimensionScore"
+            }
+          }
+        },
+        "compositeScore": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Weighted composite score across all dimensions"
+        },
+        "overallRanking": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Overall ranking position"
+        },
+        "categoryRanking": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Ranking within category"
+        },
+        "strengths": {
+          "type": "array",
+          "description": "Key competitive strengths based on scores",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 5
+        },
+        "improvements": {
+          "type": "array",
+          "description": "Areas for potential improvement",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 5
+        }
+      }
+    },
+    "dimensionScore": {
+      "type": "object",
+      "required": ["score", "confidence"],
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Score on 1-5 scale"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Confidence in the score assessment"
+        },
+        "evidence": {
+          "type": "array",
+          "description": "Evidence supporting the score",
+          "items": {
+            "type": "string",
+            "minLength": 5
+          },
+          "maxItems": 10
+        },
+        "sources": {
+          "type": "array",
+          "description": "Source URLs supporting the score",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "maxItems": 10
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Brief rationale for the assigned score",
+          "maxLength": 300
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date",
+          "description": "When this score was last updated"
+        }
+      }
+    },
+    "rankedCompetitor": {
+      "type": "object",
+      "required": ["rank", "name", "score"],
+      "properties": {
+        "rank": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Ranking position"
+        },
+        "name": {
+          "type": "string",
+          "description": "Competitor name",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "description": "Competitor category"
+        },
+        "score": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Score for this ranking perspective"
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why this competitor is ranked at this position",
+          "maxLength": 300
+        },
+        "movement": {
+          "type": "string",
+          "enum": ["up", "down", "stable", "new"],
+          "description": "Movement from previous analysis"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "category_name": "Modern Platforms",
+  "description": "Digital-first platforms focusing on comprehensive employee experience",
+  "competitors": [
+    {
+      "name": "May",
+      "description": "Reference platform for employee benefits with automatic reimbursement",
+      "headquarters": "France",
+      "founded": 2019,
+      "key_products": [
+        "Centralized benefits platform",
+        "Open banking integration",
+        "Automatic expense reimbursement",
+        "Annual budget management"
+      ],
+      "market_position": "Innovative challenger",
+      "employee_count": "50-100",
+      "key_differentiators": [
+        "Open banking for auto-reimbursement",
+        "9 benefit categories in one app",
+        "Ultra-intuitive interface",
+        "Flexible budget allocation"
+      ],
+      "target_segments": ["Mid-market", "SMB"],
+      "sources": [
+        "Search results from TOP 6 des meilleures plateformes d'avantages salariés"
+      ],
+      "confidence_level": "Medium"
+    },
+    {
+      "name": "Worklife",
+      "description": "Focus on work-life balance and employee well-being",
+      "headquarters": "France",
+      "founded": 2020,
+      "key_products": [
+        "Well-being focused benefits",
+        "Quality of work life solutions",
+        "Flexible benefit management",
+        "Employee satisfaction tools"
+      ],
+      "market_position": "Niche specialist",
+      "employee_count": "20-50",
+      "key_differentiators": [
+        "Well-being specialization",
+        "Dynamic and flexible solutions",
+        "Work-life balance focus",
+        "Personalized benefits"
+      ],
+      "target_segments": ["SMB", "Startups"],
+      "sources": [
+        "Search results from TOP 6 des meilleures plateformes d'avantages salariés"
+      ],
+      "confidence_level": "Medium"
+    },
+    {
+      "name": "Club Employés",
+      "description": "CSE platform with comprehensive employee discount network",
+      "headquarters": "France",
+      "founded": 2015,
+      "key_products": [
+        "CSE management platform",
+        "500,000+ discount offers",
+        "Gift voucher management",
+        "Travel platform integration"
+      ],
+      "market_position": "Established player",
+      "employee_count": "100-200",
+      "key_differentiators": [
+        "Extensive merchant network",
+        "CSE specialization",
+        "Travel and leisure focus",
+        "Comprehensive offer catalog"
+      ],
+      "target_segments": ["Enterprise", "Mid-market"],
+      "sources": [
+        "https://club-employes.com/"
+      ],
+      "confidence_level": "High"
+    }
+  ],
+  "category_insights": {
+    "market_dynamics": "Focus on user experience and technological innovation",
+    "key_trends": ["Mobile-first design", "AI-powered personalization", "Well-being integration"],
+    "competitive_intensity": "Medium to High"
+  }
+}
