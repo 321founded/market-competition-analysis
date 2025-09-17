@@ -79,6 +79,21 @@ async function getMarketData(marketId: string) {
   }
 }
 
+export async function generateStaticParams() {
+  try {
+    const dataDirectory = path.join(process.cwd(), 'public', 'data');
+    const marketDirs = await fs.readdir(dataDirectory, { withFileTypes: true });
+
+    return marketDirs
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => ({
+        market: dirent.name
+      }));
+  } catch {
+    return [];
+  }
+}
+
 interface MarketPageProps {
   params: {
     market: string;
